@@ -3,18 +3,15 @@ Here, I share what I learn in reinforcement learning and its utilization in reco
 
 # Table of Contents
 1. [Resources](#resources)
-2.     * Books
-3.     * Courses at Coursera
-4.     * YouTube Videos
-5. [Introduction](#intro)
-6. [Planning](#fourth-examplehttpwwwfourthexamplecom)
-7. [Multi-Armed Bandits](#mab)
-8. [Full RL](#rl)
-9. [Value-Based Approach](#vb)
-10. [Policy-Based Approach](#pb)
-11. [Actor-Critic Approach](#ac)
-12. [Model-Based Approach](#mb)
-13. [Deep Reinforcement Learning](#drl)
+2. [Introduction](#intro)
+3. [Planning](#fourth-examplehttpwwwfourthexamplecom)
+4. [Multi-Armed Bandits](#mab)
+5. [Full RL](#rl)
+6. [Value-Based Approach](#vb)
+7. [Policy-Based Approach](#pb)
+8. [Actor-Critic Approach](#ac)
+9. [Model-Based Approach](#mb)
+10. [Deep Reinforcement Learning](#drl)
 
 
 
