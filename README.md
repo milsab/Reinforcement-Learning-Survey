@@ -57,4 +57,19 @@ It is a deep reinforcement learning Bootcamp that includes 13 lectures. There ar
 ## Deep Reinforcement Learning
 *# todo*
 ## Major RL Algorithms
-*# todo*
+
+ - [DQN](https://www.nature.com/articles/nature14236): Deep Q-Network 
+ - [DDQN](https://arxiv.org/pdf/1509.06461.pdf): Double DQN
+ - [PER](https://arxiv.org/pdf/1511.05952.pdf): Perioritized Experience Replay
+ - [GPS](http://proceedings.mlr.press/v28/levine13.pdf): Guided Policy Search
+ - [DPG](http://proceedings.mlr.press/v32/silver14.pdf): Deterministic Policy Gradient Algorithms
+ - [DDPG](https://arxiv.org/pdf/1509.02971.pdf): Deep Deterministic Policy Gradient 
+ - [TRPO](https://arxiv.org/pdf/1502.05477.pdf): Trust Region Policy Optimization
+ - [GAE](https://arxiv.org/pdf/1506.02438.pdf): Generalized Advanced Estimation
+ - [PPO](https://arxiv.org/pdf/1707.06347.pdf): Proximal Policy Optimization
+ - [A3C](https://arxiv.org/pdf/1602.01783.pdf): Asynchronous Advantage Actor-Critic
+ - [ACER](https://arxiv.org/pdf/1611.01224v2.pdf): Actor-Critic with Experience Replay
+ - [SAC](https://arxiv.org/pdf/1801.01290.pdf): Soft Actor-Critic
+ - [TD3](https://arxiv.org/pdf/1802.09477.pdf): Twin Delayed Deep Deterministic
+ - [Rainbow](https://arxiv.org/pdf/1710.02298.pdf)
+ - [Unicorn](https://arxiv.org/pdf/1802.08294.pdf)
