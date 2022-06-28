@@ -1,23 +1,25 @@
-# Reinforcement-Learning-Survey
+# Reinforcement Learning Survey
 Here, I share what I learn in reinforcement learning and its utilization in recommender systems. First, I will list all sources that I found useful and what I learned from them. So, you can find all the stuff that I'm going to write here in the following resources with far better explanations. My purpose is just to summarize what I'm learning in reinforcement learning and its application in recommender systems.
 
 # Table of Contents
 1. [Resources](#resources)
-2. [Reinforcement Learning](#reinforcement-learning)
-3. [Planning](#planning)
-4. [Multi-Armed Bandits](#multi-armed-bandits)
-5. [Full RL](#full-rl)
-6. [Value-Based Approach](#valu-based-approach)
-7. [Policy-Based Approach](#policy-based-approach)
-8. [Actor-Critic Approach](#actor-critic-approach)
-9. [Model-Based Approach](#model-based-approach)
-10. [Deep Reinforcement Learning](#deep-reinforcement-learning)
-11. [Major RL Algorithms](#major-rl-algorithms)
+2. [Basic Concepts of Reinforcement Learning](#basic-concepts-of-reinforcement-learning)
+3. [Markov Decision Process](#markov-decision-process)
+4. [Planning](#planning)
+5. [Multi-Armed Bandits](#multi-armed-bandits)
+6. [Full RL](#full-rl)
+7. [Value-Based Approach](#valu-based-approach)
+8. [Policy-Based Approach](#policy-based-approach)
+9. [Actor-Critic Approach](#actor-critic-approach)
+10. [Model-Based Approach](#model-based-approach)
+11. [Deep Reinforcement Learning](#deep-reinforcement-learning)
+12. [Major RL Algorithms](#major-rl-algorithms)
 
 
 
 
 ## Resources
+Before I jump in to summarize my understanding of reinforcement learning, I decided to put the resources at the beginning because everything I will describe here has been explained in a so much better way in the following resources.
 ### Books
 - [Reinforcement Learning: An Intruduction](http://incompleteideas.net/book/the-book.html)   
 This is like a bible book in reinforcement learning by Richard Sutton and Andrew Barto. Richard Sutton is one of the most prominent scientists in the field of reinforcement learning. The book includes three main sections. The first section covers tabular reinforcement learning. Multi-Armed Bandits, Markov Decision Process, and methods like Dynamic Programming, Monte Carlo Sampling, and Temporal Difference have been explained thoroughly in this section. The second section covers methods that use function approximation. So, this section is related to what we call deep reinforcement learning. The third section has some discussion on RL from different perspectives like psychology and Neuroscience.
@@ -38,14 +40,34 @@ This course, CS234: Reinforcement Learning, has been taught by professor Emma Br
 It is a deep reinforcement learning Bootcamp that includes 13 lectures. There are different instructors who teach these lectures like Pieter Abbeel, Vlad Mnih, Chelsea Finn, Sergey Levine, etc.
 
 
-## Reinforcement Learning
+## Basic Concepts of Reinforcement Learning
 Reinforcement Learning (RL) is a type of machine learning that which the task of learning is based on trial and error. We have an agent who interacts with the environment. In each interaction, the agent takes an action on an environment. The environment reacts to that action by providing feedback. Also, the environment may change its current state to a new state. In RL, the feedback is a scalar value that represents how much the action which was taken by an agent was good in regard to the final goal.  In a nutshell, we have the following basic concepts in any RL problem.
 
-**Environment:** It is a problem that we want to solve. Usually, a problem may have different state and we want ot find a way (policy) that guide us from any given state to a final or a goal state. For example, in recommender systems, if we want to capture the dynamics of user bahaviors, the environemt will be the user. 
+#### Environment
+It is a problem that we want to solve. Usually, a problem may have a different state and we want to find a way (policy) that guides us from any given state to a final or a goal state. For example, in recommender systems, if we want to capture the dynamics of user behaviors, the environment will be the user.  
 
-**Agent:** It is a learning program that tries to learn how to takes action on environment in order to reach a final goal. For example, in recommender systems, the agent is the recommendation engine that tries to recommend items to users that are align with users' preferences in order to increase user satisfaction in long run. 
+#### Agent
+It is a learning program that tries to learn how to take an action in an environment in order to reach a final goal. For example, in recommender systems, the agent is the recommendation engine that tries to recommend items to users that align with users' preferences in order to increase user satisfaction in the long run. 
 
-**Stete:** An environment may have different states. There is a particular sub-category of RL problem that the environement has has only one state. In this type of RL problems, the state of the environemt is stationary. This type of RL problems called Multi-Armed Bandits problems that I will discuss them in more details later. Each state can be represented by a set of variables.
+#### State
+An environment may have different states. There is a sub-category of the RL problems that the environment has only one state. In this type of RL problems, the state of the environment is stationary. This type of RL problems is called Multi-Armed Bandits problems that I will discuss in more detail later. Each state can be represented by a set of variables. State space can be discrete or continuous.
+#### Observation
+The part of the state that an agent can observe is called observations. Each environment has a set of states. Some agents can see the entire state set of an environment, while some agents can observe only a subset of states.  
+
+#### Action
+An agent has access to a set of actions that can take on an environment. For example, in a recommender system, action is recommending an item or a list of items to a user. Action space can be discrete or continuous.
+#### Transition Function 
+It is a function that maps an action to a state. 
+#### Reward Function
+It is a function that generates a scalar value based on the action that has been taken by an agent on an environment. The scalar value is called reward. Reward indicates how good or bad the action was. If an action helps the agent to reach a goal state in an environment, the agent receives a high reward. Otherwise, the agent may receive low rewards or no rewards at all. Sometimes an agent may receive a negative reward based on an application domain and the design of the system. Defining an appropriate reward function is very important to design an RL-based system.
+#### Model
+A set of transition function and reward function is referred to as a model of an environment. In fact, if we have access to the transition function and reward function of an environment, then, we have access to the model of that environment. In many real-world problems, we do not have access to both the reward function and transition function so, the model of the environment is unknown. There are many RL algorithms that try to find the best way to reach the goal state in an environment by considering the fact that they do not have access to the model of that environment. They are called model-free algorithms.
+#### Policy 
+There are different ways or strategies that an agent can go from a given state in an environment to a goal state. In RL, the term that uses to describe each of those strategies is called policy. Based on a policy, an agent can take an action according to the current state. In other words, a policy is a mapping from the state (observation) to an action. The final goal of any agent is to find an optimal policy that guides the agent to reach the goal state in the best optimal way. If an agent tries to learn an optimal policy by directly learning policy, it calls a policy-based agent. There are other types of agents like value-based agents and actor-critic agents which are somehow a combination of policy-based and value-based agents.
+#### Episode
+An episode is a path that an agent starts from a start state or any other given state and ends in a final state. A final state may or may not be a goal state. An environment may have several start sates and final states. Some of those final states can be goal states.
+
+## Markov Decision Process
 ## Planning
 *# todo*
 ## Multi-Armed Bandits
@@ -62,8 +84,8 @@ Reinforcement Learning (RL) is a type of machine learning that which the task of
 *# todo*
 ## Deep Reinforcement Learning
 *# todo*
-## Major RL Algorithms
-
+## Major Deep Reinforcement Learning Algorithms
+The below list is linked to some of the most influential papers that have introduced major reinforcement algorithms. Some of them like DQN and DDQN are value-based methods and some of them like DDPG and TRPO are policy-based methods. Others like A3C, TD3, and SAC are actor-critic methods.
  - [DQN](https://www.nature.com/articles/nature14236): Deep Q-Network 
  - [DDQN](https://arxiv.org/pdf/1509.06461.pdf): Double DQN
  - [PER](https://arxiv.org/pdf/1511.05952.pdf): Perioritized Experience Replay
