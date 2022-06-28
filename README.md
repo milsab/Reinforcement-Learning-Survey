@@ -72,6 +72,7 @@ There are different ways or strategies that an agent can go from a given state i
 An episode is a path that an agent starts from a start state or any other given state and ends in a final state. A final state may or may not be a goal state. An environment may have several start sates and final states. Some of those final states can be goal states. The agent's task is to interact with an environment and learn how to find the best policy to reach the goal. If an agent's task ends naturally it is an episodic task, otherwise, it is a continuous task.
 
 ## Markov Decision Process
+*# todo*
 ## Planning
 *# todo*
 ## Multi-Armed Bandits
