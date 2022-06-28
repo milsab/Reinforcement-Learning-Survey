@@ -60,12 +60,16 @@ An agent has access to a set of actions that can take on an environment. For exa
 It is a function that maps an action to a state. 
 #### Reward Function
 It is a function that generates a scalar value based on the action that has been taken by an agent on an environment. The scalar value is called reward. Reward indicates how good or bad the action was. If an action helps the agent to reach a goal state in an environment, the agent receives a high reward. Otherwise, the agent may receive low rewards or no rewards at all. Sometimes an agent may receive a negative reward based on an application domain and the design of the system. Defining an appropriate reward function is very important to design an RL-based system.
+#### State-Value Function
+Expected reward from current state to a final state. 
+#### Action-Value Function
+If we are at a current state and take an action, the action-value function will be the expected reward from that state to a final state taking that action.
 #### Model
 A set of transition function and reward function is referred to as a model of an environment. In fact, if we have access to the transition function and reward function of an environment, then, we have access to the model of that environment. In many real-world problems, we do not have access to both the reward function and transition function so, the model of the environment is unknown. There are many RL algorithms that try to find the best way to reach the goal state in an environment by considering the fact that they do not have access to the model of that environment. They are called model-free algorithms.
 #### Policy 
 There are different ways or strategies that an agent can go from a given state in an environment to a goal state. In RL, the term that uses to describe each of those strategies is called policy. Based on a policy, an agent can take an action according to the current state. In other words, a policy is a mapping from the state (observation) to an action. The final goal of any agent is to find an optimal policy that guides the agent to reach the goal state in the best optimal way. If an agent tries to learn an optimal policy by directly learning policy, it calls a policy-based agent. There are other types of agents like value-based agents and actor-critic agents which are somehow a combination of policy-based and value-based agents.
 #### Episode
-An episode is a path that an agent starts from a start state or any other given state and ends in a final state. A final state may or may not be a goal state. An environment may have several start sates and final states. Some of those final states can be goal states.
+An episode is a path that an agent starts from a start state or any other given state and ends in a final state. A final state may or may not be a goal state. An environment may have several start sates and final states. Some of those final states can be goal states. The agent's task is to interact with an environment and learn how to find the best policy to reach the goal. If an agent's task ends naturally it is an episodic task, otherwise, it is a continuous task.
 
 ## Markov Decision Process
 ## Planning
