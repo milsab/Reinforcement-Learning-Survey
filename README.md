@@ -3,7 +3,7 @@ Here, I share what I learn in reinforcement learning and its utilization in reco
 
 # Table of Contents
 1. [Resources](#resources)
-2. [Introduction](#introduction)
+2. [Reinforcement Learning](#reinforcement-learning)
 3. [Planning](#planning)
 4. [Multi-Armed Bandits](#multi-armed-bandits)
 5. [Full RL](#full-rl)
@@ -38,8 +38,14 @@ This course, CS234: Reinforcement Learning, has been taught by professor Emma Br
 It is a deep reinforcement learning Bootcamp that includes 13 lectures. There are different instructors who teach these lectures like Pieter Abbeel, Vlad Mnih, Chelsea Finn, Sergey Levine, etc.
 
 
-## Introduction
-*# todo*
+## Reinforcement Learning
+Reinforcement Learning (RL) is a type of machine learning that which the task of learning is based on trial and error. We have an agent who interacts with the environment. In each interaction, the agent takes an action on an environment. The environment reacts to that action by providing feedback. Also, the environment may change its current state to a new state. In RL, the feedback is a scalar value that represents how much the action which was taken by an agent was good in regard to the final goal.  In a nutshell, we have the following basic concepts in any RL problem.
+
+**Environment:** It is a problem that we want to solve. Usually, a problem may have different state and we want ot find a way (policy) that guide us from any given state to a final or a goal state. For example, in recommender systems, if we want to capture the dynamics of user bahaviors, the environemt will be the user. 
+
+**Agent:** It is a learning program that tries to learn how to takes action on environment in order to reach a final goal. For example, in recommender systems, the agent is the recommendation engine that tries to recommend items to users that are align with users' preferences in order to increase user satisfaction in long run. 
+
+**Stete:** An environment may have different states. There is a particular sub-category of RL problem that the environement has has only one state. In this type of RL problems, the state of the environemt is stationary. This type of RL problems called Multi-Armed Bandits problems that I will discuss them in more details later. Each state can be represented by a set of variables.
 ## Planning
 *# todo*
 ## Multi-Armed Bandits
