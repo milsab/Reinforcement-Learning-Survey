@@ -87,7 +87,7 @@ Generally, in a reinforcement learning problem, the final goal is to find the be
 
 In order to make immediate rewards have more influence than later rewards, a discount factor, $\gamma$ , will be used in the equation. $\gamma$ is a number between 0 and 1.
 
-*G<sub>t</sub> = R<sub>t+1</sub> + $\gamma$R<sub>t+2</sub> + $\gamma$ <sup>2</sup>R<sub>t+3</sub> + ... + $\gamma$ <sup>t+n-1</sup>R<sub>t+n</sub>*
+G<sub>t</sub> = R<sub>t+1</sub> + $\gamma$R<sub>t+2</sub> + $\gamma$ <sup>2</sup>R<sub>t+3</sub> + ... + $\gamma$ <sup>t+n-1</sup>R<sub>t+n</sub>
 ## Planning
 *# todo*
 ## Multi-Armed Bandits
