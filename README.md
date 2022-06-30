@@ -78,16 +78,16 @@ An episode is a path that an agent starts from a start state or any other given 
 ## Markov Decision Process
 In reinforcement learning problems, to mathematically present interactions between an agent and an environment, we use Markov Decision Process (MDP). MDP is a mathematical framework to model a situation in which we need to deal with sequential decision-making under uncertainty. MDPs are usually described with the following tuple:
 
-*MDP(S, A, T, R, $\gamma$)*
+*MDP(S, A, T, R, $\gamma$ )*
 
 In the above tuple, *S* is the current state of the environment, *A* is the agent's action, *T* is the transition function that maps the current state and action to a new state, *R* is the reward that the agent will receive by taking action *A* in state *S*, and $\gamma$ is a dicount factor that lets immediate rewards have more influence in expected return than future rewards.
 Generally, in a reinforcement learning problem, the final goal is to find the best way (optimal policy) from a given state to a goal state. To quantify it, the agent use rewards that it will receive at each step. Therefore, in this case, the agent should take actions to maximize accumulative rewards. 
 
 *G<sub>t</sub> = R<sub>t+1</sub> + R<sub>t+2</sub> + R<sub>t+3</sub> + ... + R<sub>t+n</sub>*
 
-In order to make immediate rewards have more influence than later rewards, a discount factor, $\gamma$, will be used in the equation. $\gamma$ is a number between 0 and 1.
+In order to make immediate rewards have more influence than later rewards, a discount factor, $\gamma$ , will be used in the equation. $\gamma$ is a number between 0 and 1.
 
-*G<sub>t</sub> = R<sub>t+1</sub> + $\gamma$R<sub>t+2</sub> + $\gamma$<sup>2</sup>R<sub>t+3</sub> + ... + $\gamma$<sup>t+n-1</sup>R<sub>t+n</sub>*
+*G<sub>t</sub> = R<sub>t+1</sub> + $\gamma$R<sub>t+2</sub> + $\gamma$ <sup>2</sup>R<sub>t+3</sub> + ... + $\gamma$ <sup>t+n-1</sup>R<sub>t+n</sub>*
 ## Planning
 *# todo*
 ## Multi-Armed Bandits
