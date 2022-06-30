@@ -60,6 +60,10 @@ An agent has access to a set of actions that can take on an environment. For exa
 It is a function that maps an action to a state. 
 #### Reward Function
 It is a function that generates a scalar value based on the action that has been taken by an agent on an environment. The scalar value is called reward. Reward indicates how good or bad the action was. If an action helps the agent to reach a goal state in an environment, the agent receives a high reward. Otherwise, the agent may receive low rewards or no rewards at all. Sometimes an agent may receive a negative reward based on an application domain and the design of the system. Defining an appropriate reward function is very important to design an RL-based system.
+
+#### Return
+Return is the summation of all rewards that an will receive from a current state to a final state.
+
 #### State-Value Function
 Expected reward from current state to a final state. 
 #### Action-Value Function
