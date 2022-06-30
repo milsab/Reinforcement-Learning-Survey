@@ -65,9 +65,11 @@ It is a function that generates a scalar value based on the action that has been
 Return is the summation of all rewards that an will receive from a current state to a final state.
 
 #### State-Value Function
-Expected reward from current state to a final state. 
+State-value function, V(s), is the expected return from the current state to a final state. 
 #### Action-Value Function
-If we are at a current state and take an action, the action-value function will be the expected reward from that state to a final state taking that action.
+If we are at a current state and take an action, the action-value function, Q(s, a), will be the expected return from that state to a final state taking that action.
+#### Advantage Function
+Advantage function, A(s, a), is the differnce between action-value function and state-value function under policy $\pi$.
 #### Model
 A set of transition function and reward function is referred to as a model of an environment. In fact, if we have access to the transition function and reward function of an environment, then, we have access to the model of that environment. In many real-world problems, we do not have access to both the reward function and transition function so, the model of the environment is unknown. There are many RL algorithms that try to find the best way to reach the goal state in an environment by considering the fact that they do not have access to the model of that environment. They are called model-free algorithms.
 #### Policy 
